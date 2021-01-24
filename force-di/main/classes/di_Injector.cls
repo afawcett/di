@@ -152,7 +152,8 @@ public class di_Injector {
                                                         , BindingObject__r.QualifiedApiName
                                                         , BindingObjectAlternate__c
                                                         , BindingSequence__c
-                                                        FROM di_Binding__mdt];
+                                                        FROM di_Binding__mdt
+                                                  		WHERE Active__c = true];
             for(di_Binding__mdt records :bindingMDTRec){
                 recordList.add(new di_BindingConfigWrapper(records));
             }
